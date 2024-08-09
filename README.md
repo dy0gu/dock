@@ -11,10 +11,11 @@ Below is a list of common commands shared by all instances. Refer to each folder
 - Run the Docker Compose service:
 
     ```shell
-    docker compose up --force-recreate
+    docker compose up --build --force-recreate
     ```
+The ```--build``` flag will force images to always have the latest contents, caching will still be done so if nothing changes the build is nearly instantaneous.
 
-The ```--force-recreate``` flag will force the container to be restarted if it is already running.
+The ```--force-recreate``` flag will force containers to be restarted if they are already running.
 
 Use the ```--detach``` flag to run the service in the background.
 
